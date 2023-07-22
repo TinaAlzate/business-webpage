@@ -1,3 +1,4 @@
+/* Variables */
 :root {
     --color-text: #787878;
     --color-title: #4E4E4E;
@@ -6,12 +7,18 @@
     --color-violet: #61458C;
     --color-map-filter: #79629E;
 }
+
+/* Import icons */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+/* Global rules */
 *{  
     font-family:'Open Sans', sans-serif;
     text-align: justify;
 }
+
+/* Section header */
 header{
     & .hero-image{
         height: 65vh;
@@ -43,31 +50,56 @@ header{
         }
     }
 }
+
+/* Section who_we_are */
 #who_we_are{
     background-color: var(--color-section);
+    & h2, h3{
+        color: var(--color-title);
+    }
+    & p{
+        color:var(--color-text);
+    }
 }
+
+/* Section our_services */
 #our_services{
+    & h2, h3{
+        color: var(--color-title);
+    }
+    & p{
+        color:var(--color-text);
+    }
     .circle{
         width: 5rem;
         height: 5rem;
-        transition-duration: 0.5s;
+        border: 0.3rem solid var(--color-radius-icon);
+        transition: all 0.5s;
         & i{
             color: var(--color-violet);
-            transition-duration: 0.5s;
-        }
-        & i:hover{
-            color:white;
+            transition: all 0.5s;
         }
     }
     .circle:hover{
         background-color: var(--color-violet);
+        border: 0.3rem solid var(--color-violet);
+        & i{
+            color:white;
+        }
     }
 }
+
+/* Section portafolio */
 #portafolio{
     background-color: var(--color-section);
+    & h2{
+        color: var(--color-title);
+    }
+    & p{
+        color:var(--color-text);
+    }
     & img{
-        transition-property: all;
-        transition-duration:1s;   
+        transition: all 0.5s;   
     }
     & img:hover{
         transform: rotate(-15deg);
@@ -77,6 +109,15 @@ header{
         border-radius: 50%;
     }
 }
+
+/* Section location */
+#location{
+    & h2, h4, p, address{
+        color: var(--color-title);
+    }
+}
+
+/* Section email_us */
 #email_us{
     background-color: var(--color-map-filter);
     background-image: url('/media/img/map-image.png');
@@ -87,6 +128,7 @@ header{
         color: white;
     }
     & button{
+        color:var(--color-title);
         background-color:var(--color-section);
     }
     & button:hover{
@@ -102,6 +144,8 @@ footer{
         }
     }
 }
+
+/* Media queries */
 @media(width<768px){
     header{
         .hero-image{
@@ -127,13 +171,6 @@ footer{
     #email_us{
         & button{
             pointer-events:none;
-        }
-    }
-}
-@media(width>576px){
-    header{
-        & hr{
-            display: none;
         }
     }
 }
