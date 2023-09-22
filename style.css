@@ -16,6 +16,8 @@
 *{  
     font-family:'Open Sans', sans-serif;
     text-align: justify;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 /* Section header */
