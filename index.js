@@ -1,3 +1,6 @@
+
+import { startIntersection, stickyElement, visitElementIntersec } from './jsEntregeble/functionsLocation.js';
+
 const formUser = document.getElementById('formUser');
 
 const END_POIN_API_FORMUSER = 'https://servidorsalleform-production.up.railway.app/form';
@@ -65,3 +68,28 @@ const serviceApiUserForm = async (userJson) => {
     });
   }
 }
+
+
+let navBar = document.querySelector('nav');
+const options = {
+  style: {
+    position: 'fixed',
+    width: '100%',
+    top: '0'
+  }
+}
+stickyElement(navBar, options, 'a');
+
+let optionIntersec = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.7
+}
+
+export let sections = [...document.querySelectorAll('section')]
+  .map((section) => {
+    startIntersection(section, optionIntersec);
+    let titleElement = document.querySelector('h2');
+    let dataKey = section.dataset.key;
+  });
+
