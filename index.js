@@ -68,7 +68,6 @@ const serviceApiUserForm = async (userJson) => {
   }
 }
 
-
 const { results, info } = await fetchApi();
 addCardCharacter(results, info);
 
