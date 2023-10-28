@@ -1,26 +1,20 @@
 import { jsonConstantes } from '../constantes/constantes.js';
 
-export const fetchApi = async () => {
+export const fetchApi = async (url) => {
   try {
-    return (await fetch(jsonConstantes.API_RICK_MORTY)).json();
-  }catch{
+    return (await fetch(url)).json();
+  } catch {
     return new Error('Error en el consumo de la api')
   }
 };
 
-const template = document.querySelector('#apiRickmorty');
-const objectFrezzer = {
-  card: `[data-card="cardApi"]`,
-  imgage: `[data-img="img-card"]`,
-  name: `[data-name="name"]`,
-  status: `[data-status="status"]`,
-  species: `[data-species="species"]`,
-  origin: `[data-origin="origin"]`,
-  gender: `[data-gender="gender"]`
-}
+
 const sectionApi = document.querySelector('.rickMortyApi');
-export function addCardCharacter(results, info){
-  for (let { image, name, id, status, species, gender, episode } of results) {
+export function addCardCharacter(results) {
+
+  const titleSectionScroll = document.createElement('h2');
+  titleSectionScroll.innerText = 'Section scroll infinity'
+  for (let { image, name, id, status, species, gender } of results) {
     let container = `
             <div class="card m-3 col-md-4" style="width: 18rem;"  data-card="cardApi">
                 <img
@@ -45,26 +39,18 @@ export function addCardCharacter(results, info){
                 </div>
             </div>
     `;
-    createTamplet(container);
+    createTemplate(container);
   }
 }
 
 
 const rowContainer = document.createElement('div');
-rowContainer.setAttribute('class', 'row mx-auto' );
+rowContainer.setAttribute('class', 'row mx-auto');
 
-function createTamplet(objectHtml){
+function createTemplate(objectHtml) {
   const tagMain = document.createElement('div');
-  console.log(objectHtml)
   tagMain.setAttribute('class', 'col-4 d-flex justify-content-center align-items-center');
   tagMain.innerHTML = objectHtml;
   rowContainer.append(tagMain);
   sectionApi.append(rowContainer);
 }
-
-
-
-
-
-
-

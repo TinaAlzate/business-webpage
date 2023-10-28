@@ -1,4 +1,6 @@
-import { fetchApi, addCardCharacter } from './api/apiRick.js'
+import { fetchApi, addCardCharacter } from './api/apiRick.js';
+import { jsonConstantes } from './constantes/constantes.js';
+import { startIntersectionApi } from './api/nextRequest.js';
 
 const formUser = document.getElementById('formUser');
 
@@ -68,6 +70,16 @@ const serviceApiUserForm = async (userJson) => {
   }
 }
 
-const { results, info } = await fetchApi();
-addCardCharacter(results, info);
+const { results, info } = await fetchApi(jsonConstantes.API_RICK_MORTY);
+addCardCharacter(results);
 
+let objectNext = {
+  urlApi: info.next,
+  element: document.querySelector("#nextRequest"),
+  options: {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0,
+  }
+}
+startIntersectionApi(objectNext);
