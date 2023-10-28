@@ -1,7 +1,6 @@
 const modal = document.querySelector(`[data-modal="modal"]`);
 
 export function showModal(){
-  // modal.classList.remove('d-none');
   modal.classList.add('modalShow')
   const section = document.querySelectorAll(`section[data-key]`);
   let objectSection = [];
@@ -11,6 +10,7 @@ export function showModal(){
       numberSerction: element.attributes['data-key'].value
     }) ;    
   });
+
   createModal(objectSection)
 }
 
@@ -18,6 +18,7 @@ export function showModal(){
 const listHelp = document.querySelector(`[data-list="list"]`);
 
 function createModal(objectInfo){
+
   const addElementList = [];
 
   if(listHelp.children.length !== 0){

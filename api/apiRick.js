@@ -12,8 +12,6 @@ export const fetchApi = async (url) => {
 const sectionApi = document.querySelector('.rickMortyApi');
 export function addCardCharacter(results) {
 
-  const titleSectionScroll = document.createElement('h2');
-  titleSectionScroll.innerText = 'Section scroll infinity'
   for (let { image, name, id, status, species, gender } of results) {
     let container = `
             <div class="card m-3 col-md-4" style="width: 18rem;"  data-card="cardApi">
