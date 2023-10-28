@@ -1,3 +1,5 @@
+import { fetchApi, addCardCharacter } from './api/apiRick.js'
+
 const formUser = document.getElementById('formUser');
 
 const END_POIN_API_FORMUSER = 'https://servidorsalleform-production.up.railway.app/form';
@@ -65,3 +67,8 @@ const serviceApiUserForm = async (userJson) => {
     });
   }
 }
+
+
+const { results, info } = await fetchApi();
+addCardCharacter(results, info);
+
