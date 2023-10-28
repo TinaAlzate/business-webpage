@@ -1,5 +1,7 @@
 
 import { startIntersection, stickyElement, visitElementIntersec } from './jsEntregeble/functionsLocation.js';
+import { fetchApi, addCardCharacter } from './api/apiRick.js'
+
 
 const formUser = document.getElementById('formUser');
 
@@ -70,26 +72,29 @@ const serviceApiUserForm = async (userJson) => {
 }
 
 
-let navBar = document.querySelector('nav');
-const options = {
-  style: {
-    position: 'fixed',
-    width: '100%',
-    top: '0'
-  }
-}
-stickyElement(navBar, options, 'a');
+// let navBar = document.querySelector('nav');
+// const options = {
+//   style: {
+//     position: 'fixed',
+//     width: '100%',
+//     top: '0'
+//   }
+// }
+// stickyElement(navBar, options, 'a');
 
-let optionIntersec = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 0.7
-}
+// let optionIntersec = {
+//   root: null,
+//   rootMargin: "0px",
+//   threshold: 0.7
+// }
 
-export let sections = [...document.querySelectorAll('section')]
-  .map((section) => {
-    startIntersection(section, optionIntersec);
-    let titleElement = document.querySelector('h2');
-    let dataKey = section.dataset.key;
-  });
+// export let sections = [...document.querySelectorAll('section')]
+//   .map((section) => {
+//     startIntersection(section, optionIntersec);
+//     let titleElement = document.querySelector('h2');
+//     let dataKey = section.dataset.key;
+//   });
+
+const { results, info } = await fetchApi();
+addCardCharacter(results, info);
 
