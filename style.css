@@ -186,4 +186,6 @@ footer{
 section {
     min-height: 50rem;
 }
-
+.modalShow{
+    display:block !important; 
+}

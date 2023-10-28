@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/78bfaed56a.js" crossorigin="anonymous"></script>
-    <script type="module" src="index.js" async></script>
-    <script type="module" src="keyboardEvents.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="index.js" async></script>
+    <script type="module" src="./jsEntregeble/keyboardEvents.js"></script>
     <title>Bussines Webpage</title>
 </head>
+
 <body class="p-0 m-0">
-    <!-- Section header -->
+    <!-- header -->
     <header>
         <div class="hero-image d-flex">
             <h1 class="my-auto text-center text-lg-start ps-5">My Bussines Webpage</h1>
@@ -21,7 +22,9 @@
         <nav class="navbar navbar-expand-sm navbar-dark">
             <div class="container-fluid">
                 <hr>
-                <button class="navbar-toggler border-light mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler border-light mx-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <i class="bi bi-list navbar-toggler-icon"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -49,18 +52,34 @@
     </header>
     <main>
         <!-- Section who we are -->
-        <section id="who_we_are" class="py-4 px-2 p-md-5">
+        <section id="who_we_are" class="py-4 px-2 p-md-5" data-key="1">
             <div class="d-flex flex-column">
                 <h2 class="text-center">Who we are?</h2>
-                <p class="mx-auto text-center w-50 pb-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna sit amet diam euismod malesuada.</p>
+                <p class="mx-auto text-center w-50 pb-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris convallis magna sit amet diam euismod malesuada.</p>
             </div>
             <div class="w-100 m-0 row hstack">
                 <div class="col-lg p-lg-4">
                     <article>
                         <h3>Lorem ipsum</h3>
                         <img class="pe-2 d-inline float-start" src="./media/img/1.jpg" alt="Who we are?">
-                        <p class="d-inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed, cursus sodales magna. Proin feugiat fermentum metus. Nam iaculis vel nibh vitae lacinia. Nullam ut ante id tortor lobortis convallis ut tempus tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent congue varius justo, id molestie nibh sagittis et Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed, cursus sodales magna. Proin feugiat fermentum metus. Nam iaculis vel nibh vitae lacinia. Nullam ut ante id tortor lobortis convallis ut tempus tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent congue varius justo, id molestie nibh sagittis et Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent congue varius justo, id molestie nibh sagittis et
-                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent congue varius justo, id molestie nibh sagittis et Interdum et malesuada fames ac ante ipsum primis in faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent congue varius justo, id molestie nibh sagittis et. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent congue varius justo, id molestie nibh sagittis et</p>
+                        <p class="d-inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis
+                            magna sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed,
+                            cursus sodales magna. Proin feugiat fermentum metus. Nam iaculis vel nibh vitae lacinia.
+                            Nullam ut ante id tortor lobortis convallis ut tempus tortor. Interdum et malesuada fames ac
+                            ante ipsum primis in faucibus. Praesent congue varius justo, id molestie nibh sagittis et
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna sit amet
+                            diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed, cursus sodales
+                            magna. Proin feugiat fermentum metus. Nam iaculis vel nibh vitae lacinia. Nullam ut ante id
+                            tortor lobortis convallis ut tempus tortor. Interdum et malesuada fames ac ante ipsum primis
+                            in faucibus. Praesent congue varius justo, id molestie nibh sagittis et Interdum et
+                            malesuada fames ac ante ipsum primis in faucibus. Praesent congue varius justo, id molestie
+                            nibh sagittis et
+                            Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent congue varius justo,
+                            id molestie nibh sagittis et Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                            Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent congue varius justo,
+                            id molestie nibh sagittis et. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                            Praesent congue varius justo, id molestie nibh sagittis et</p>
                     </article>
                 </div>
                 <div class="d-none d-lg-block vr p-0"></div>
@@ -70,17 +89,26 @@
                         <aside class="d-none d-lg-inline ps-2 float-end">
                             <a href=""><img src="/media/img/ad.jpg" alt="Comprar en amazon"></a>
                         </aside>
-                        <p class="d-inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed, cursus sodales magna. Proin feugiat fermentum metus. Nam iaculis vel nibh vitae lacinia. Nullam ut ante id tortor lobortis convallis ut tempus tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent congue varius justo, id molestie nibh sagittis et</p>
+                        <p class="d-inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis
+                            magna sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed,
+                            cursus sodales magna. Proin feugiat fermentum metus. Nam iaculis vel nibh vitae lacinia.
+                            Nullam ut ante id tortor lobortis convallis ut tempus tortor. Interdum et malesuada fames ac
+                            ante ipsum primis in faucibus. Praesent congue varius justo, id molestie nibh sagittis et
+                        </p>
                     </article>
                     <article>
                         <h3 class="mt-4">Lorem Ipsum</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed, cursus sodales magna. Proin feugiat fermentum metus. Nam iaculis vel nibh vitae lacinia. Nullam ut ante id tortor lobortis convallis ut tempus tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent congue varius justo, id molestie nibh sagittis et.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna sit amet diam
+                            euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed, cursus sodales
+                            magna. Proin feugiat fermentum metus. Nam iaculis vel nibh vitae lacinia. Nullam ut ante id
+                            tortor lobortis convallis ut tempus tortor. Interdum et malesuada fames ac ante ipsum primis
+                            in faucibus. Praesent congue varius justo, id molestie nibh sagittis et.</p>
                     </article>
                 </div>
             </div>
         </section>
         <!--Section our services -->
-        <section id="our_services" class="p-sm-5 p-3">
+        <section id="our_services" class="p-sm-5 p-3" data-key="2">
             <h2 class="text-center h1 pb-sm-5 pb-2">Our services</h2>
             <div class="row">
                 <article class="d-flex justify-content-around pb-4 col-lg-4">
@@ -89,50 +117,60 @@
                     </span>
                     <div class="w-75 m-0 ps-5">
                         <h3>Service 1</h3>
-                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed.</p>
+                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna
+                            sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed.</p>
                     </div>
                 </article>
                 <article class="d-flex justify-content-around pb-4 col-lg-4">
-                    <span class=" rounded-circle p-4 d-flex align-items-center justify-content-center circle"><i class="fs-1 fa fa-code" aria-hidden="true"></i></span>                    
+                    <span class=" rounded-circle p-4 d-flex align-items-center justify-content-center circle"><i
+                            class="fs-1 fa fa-code" aria-hidden="true"></i></span>
                     <div class="w-75 m-0 ps-5">
                         <h3>Service 2</h3>
-                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed.</p>
+                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna
+                            sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed.</p>
                     </div>
                 </article>
                 <article class="d-flex justify-content-around pb-4 col-lg-4">
                     <span class=" rounded-circle p-4 d-flex align-items-center justify-content-center circle">
                         <i class="fs-1 fa fa-rss" aria-hidden="true"></i>
-                    </span>                   
+                    </span>
                     <div class="w-75 m-0 ps-5">
                         <h3>Service 3</h3>
-                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed.</p>
+                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna
+                            sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed.</p>
                     </div>
                 </article>
                 <article class="d-flex justify-content-around pb-4 col-lg-4">
-                    <span class=" rounded-circle p-4 d-flex align-items-center justify-content-center circle"><i class="fs-1 fa fa-globe" aria-hidden="true"></i></span>
+                    <span class=" rounded-circle p-4 d-flex align-items-center justify-content-center circle"><i
+                            class="fs-1 fa fa-globe" aria-hidden="true"></i></span>
                     <div class="w-75 m-0 ps-5">
                         <h3>Service 4</h3>
-                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed.</p>
+                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna
+                            sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed.</p>
                     </div>
                 </article>
                 <article class="d-flex justify-content-around pb-4 col-lg-4">
-                    <span class=" rounded-circle p-4 d-flex align-items-center justify-content-center circle"><i class="fs-1 fa fa-flag" aria-hidden="true"></i></span>                    
+                    <span class=" rounded-circle p-4 d-flex align-items-center justify-content-center circle"><i
+                            class="fs-1 fa fa-flag" aria-hidden="true"></i></span>
                     <div class="w-75 m-0 ps-5">
                         <h3>Service 5</h3>
-                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed.</p>
+                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna
+                            sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed.</p>
                     </div>
                 </article>
                 <article class="d-flex justify-content-around pb-4 col-lg-4">
-                    <span class=" rounded-circle p-4 d-flex align-items-center justify-content-center circle"><i class="fs-1 fa fa-cog" aria-hidden="true"></i></span>                   
+                    <span class=" rounded-circle p-4 d-flex align-items-center justify-content-center circle"><i
+                            class="fs-1 fa fa-cog" aria-hidden="true"></i></span>
                     <div class="w-75 m-0 ps-5">
                         <h3>Service 6</h3>
-                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed.</p>
+                        <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis magna
+                            sit amet diam euismod malesuada. Vestibulum metus tellus, interdum elementum nisi sed.</p>
                     </div>
                 </article>
             </div>
         </section>
         <!-- Section portafolio -->
-        <section id="portafolio" class="px-2 py-4 p-lg-5">
+        <section id="portafolio" class="px-2 py-4 p-lg-5" data-key="3">
             <div>
                 <h2 class="text-center pb-3">Portafolio</h2>
                 <p class="text-center pb-2 pb-md-5">There are success projects created by us</p>
@@ -146,7 +184,7 @@
 
                 <img class="col-10 offset-sm-2 col-sm-4 col-lg-3 offset-lg-0" src="./media/img/5.jpg" alt="Portfolio 5">
 
-                <img class="col-10 col-sm-4 col-lg-3 offset-lg-1" src="./media/img/6.jpg" alt="Portfolio 6"> 
+                <img class="col-10 col-sm-4 col-lg-3 offset-lg-1" src="./media/img/6.jpg" alt="Portfolio 6">
 
                 <img class="col-10 offset-sm-2 col-sm-4 col-lg-3 offset-lg-1" src="./media/img/7.jpg" alt="Portfolio 7">
 
@@ -158,13 +196,16 @@
             </div>
         </section>
         <!-- Section contact -->
-        <section id="location" class="px-2 py-4 p-md-5 d-flex flex-column">
+        <section id="location" class="px-2 py-4 p-md-5 d-flex flex-column" data-key="4">
             <div>
                 <h2 class="text-center pb-3">Location</h2>
                 <p class="text-center pb-2 pb-lg-5">You can find us:</p>
             </div>
             <div class="d-block m-auto m-lg-0 d-lg-flex align-items-center justify-content-evenly">
-                <iframe class="border border-dark border-2 rounded-circle mb-5 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.411255462493!2d2.1274877098465526!3d41.408590494562844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816c5cc995f%3A0xe6d45d60cbf71998!2sLa%20Salle%20Campus%20Barcelona-URL!5e0!3m2!1ses-419!2ses!4v1688567601324!5m2!1ses-419!2ses" width="300" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="border border-dark border-2 rounded-circle mb-5 mb-lg-0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.411255462493!2d2.1274877098465526!3d41.408590494562844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816c5cc995f%3A0xe6d45d60cbf71998!2sLa%20Salle%20Campus%20Barcelona-URL!5e0!3m2!1ses-419!2ses!4v1688567601324!5m2!1ses-419!2ses"
+                    width="300" height="300" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div>
                     <h4 class="pb-2 text-center text-lg-start">Head Office</h4>
                     <address class="pb-2 pb-lg-5 text-center text-lg-start">
@@ -183,17 +224,19 @@
             </div>
         </section>
         <!-- Section email Us -->
-        <section id="email_us" class="p-4 p-md-5">
+        <section id="email_us" class="p-4 p-md-5" data-key="5">
             <h2 class="text-center pb-2 pb-md-5">Email us</h2>
-            <form action="/"  method="POST" id="formUser" class="row">
+            <form action="/" method="POST" id="formUser" class="row">
                 <label class="offset-sm-2 col-sm-2 col-form-label" for="name">Name*:</label>
                 <div class=" col-sm-6">
-                    <input class="form-control mb-3" type="text" id="name" name="name" placeholder="Ej. Jaun Perez" required>
+                    <input class="form-control mb-3" type="text" id="name" name="name" placeholder="Ej. Jaun Perez"
+                        required>
                 </div>
 
                 <label class="offset-sm-2 col-sm-2 col-form-label" for="email">Email*:</label>
                 <div class=" col-sm-6">
-                    <input class="form-control mb-3" type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                    <input class="form-control mb-3" type="email" id="email" name="email"
+                        placeholder="example@gmail.com" required>
                 </div>
 
                 <label class="offset-sm-2 col-sm-2 col-form-label" for="phone">Phone:</label>
@@ -208,20 +251,76 @@
 
                 <label class="offset-sm-2 col-sm-2 col-form-label" for="subject">Subject*:</label>
                 <div class=" col-sm-6">
-                    <input class="form-control mb-3" type="text" id="subject" name="subject" placeholder="Subject" required>
+                    <input class="form-control mb-3" type="text" id="subject" name="subject" placeholder="Subject"
+                        required>
                 </div>
 
                 <label class="offset-sm-2 col-sm-2 col-form-label" for="message">Message*:</label>
                 <div class=" col-sm-6">
-                    <textarea class="form-control mb-3" name="message" id="message" placeholder="Message" required></textarea>
+                    <textarea class="form-control mb-3" name="message" id="message" placeholder="Message"
+                        required></textarea>
                 </div>
-                
+
                 <button class="btn offset-5 offset-sm-6 col-auto" type="submit">Send</button>
             </form>
         </section>
     </main>
     <footer class="p-2">
-        <p class="text-end align-middle m-0">© 2016 - <a href="https://www.salleurl.edu/es">La salle</a>. All Rights Reserved.</p>
+        <p class="text-end align-middle m-0">© 2016 - <a href="https://www.salleurl.edu/es">La salle</a>. All Rights
+            Reserved.</p>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal" data-modal="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="fs-5 m-0 fw-bold p-3">Keyboard shortcuts</h1>
+                <button type="button" class="btn-close modalClose" data-close></button>
+            </div>
+                <div class="modal-body d-flex justify-content-between m-0">
+                    <div class="m-0 w-50">
+                        <ul class="list-group">
+                            <li
+                                class="list-group-item d-flex justify-content-between align-items-center m-0 bg-secondary-subtle">
+                                <div class="m-0 fw-semibold">Index</div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center m-0">
+                                <div class="m-0">Up</div>
+                                <div class="m-0">
+                                    <kbd class="bg-secondary-subtle text-black border border-secondary mx-1">
+                                        <span> u </span>
+                                    </kbd>
+                                    or
+                                    <kbd class="bg-secondary-subtle text-black border border-secondary mx-1">
+                                        <span> ↑ </span>
+                                    </kbd>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center m-0">
+                                <div class="m-0">Down</div>
+                                <div class="m-0">
+                                    <kbd class="bg-secondary-subtle text-black border border-secondary mx-1">
+                                        <span> d </span>
+                                    </kbd>
+                                    or
+                                    <kbd class="bg-secondary-subtle text-black border border-secondary mx-1">
+                                        <span> ↓ </span>
+                                    </kbd>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="m-0 w-50">
+                        <ul class="list-group" data-list="list">
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
