@@ -73,19 +73,6 @@ function closeTemp(event){
 }
 
 
-
-
-// function createTemperatureTest(){
-//   let { time, values } = mockApi
-//   let dateApi = new Date(time);
-//   // De esta forma comprobamos el dia y su temperatura.
-//   let day = new Date();
-//   if (day.getDate() === dateApi.getDate()){
-//     addTimeTagDocument();
-//     addTagDocumentTemp(values);
-//   }
-// }
-// Interval para el cambio de minuto
 setInterval(
   addTimeTagDocument
 ,jsonConstantes.MINUTES);
@@ -103,7 +90,6 @@ export function addTimeTagDocument(){
   }
 }
 
-createTemperatureTest();
 
 
 function addTagDocumentTemp({ temperatureAvg, temperatureMax, temperatureMin, rainIntensityAvg, rainIntensityMax, rainIntensityMin, cloudCoverAvg, cloudCoverMax, cloudCoverMin }){
