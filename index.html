@@ -8,7 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="index.js" async></script>
-    <script type="module" src="./jsEntregeble/keyboardEvents.js"></script>
+    <script type="module" src="./jsEntregeble/keyboardEvents.js" async></script>
+    <script type="module" src="./api/tempApi.js" async></script>
     <link rel="icon" type="image/png" href="./media/img/icon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
@@ -54,6 +55,29 @@
     </header>
     <main>
         <!-- Section who we are -->
+
+        <!-- Climate  -->
+        <div class="position-fixed top-0 w-100 d-flex justify-content-end align-items-end gap-3 z-3 pe-1 pt-1 d-none" data-climate="climate">
+            <div class="card d-flex justify-content-end align-items-end gap-2 rounded-1 m-0" data-temperature="temp">
+                <div
+                    class="m-0 pt-2 w-100 d-flex flex-row justify-content-around align-items-center gap-1 rounded-1 div-header">
+                    <p class="text-white-50 m-0 calendar" data-titleTemp="tite"></p>
+                    <p class="text-white-50 m-0 calendar" data-time="time"></p>
+                    <p role="button" class="btn p-0 m-0 text-danger-emphasis fs-4" data-btn="close-temp">•</p>
+                </div>
+                <div class="d-flex w-100 align-items-center justify-content-around m-0">
+
+                    <strong class="text-white h2" data-avg="avg"></strong>
+
+                    <img src="" alt="Climate" class="imgTemperature" data-imgClimate="climate">
+                </div>
+
+
+            </div>
+
+        </div>
+
+
         <section id="who_we_are" class="py-4 px-2 p-md-5" data-key="1">
             <div class="d-flex flex-column">
                 <h2 class="text-center">Who we are?</h2>
@@ -184,7 +208,8 @@
 
                 <img class="col-10 col-sm-4 col-lg-3 offset-lg-1" src="./media/img/4.jpg" alt="Portfolio 4">
 
-                <img class="col-10 offset-sm-2 col-sm-4 col-lg-3 offset-lg-0 mx-lg-auto" src="./media/img/5.jpg" alt="Portfolio 5">
+                <img class="col-10 offset-sm-2 col-sm-4 col-lg-3 offset-lg-0 mx-lg-auto" src="./media/img/5.jpg"
+                    alt="Portfolio 5">
 
                 <img class="col-10 col-sm-4 col-lg-3 offset-lg-1" src="./media/img/6.jpg" alt="Portfolio 6">
 
@@ -284,10 +309,10 @@
     <div class="modal bg-dark bg-opacity-25 overflow-y-hidden" data-modal="modal">
         <div class="modal-dialog h-100 d-flex align-items-center justify-content-center">
             <div class="modal-content">
-            <div class="modal-header w-100 d-flex justify-content-between bg-secondary-subtle">
-                <h1 class="fs-5 m-0 fw-bold">Keyboard shortcuts</h1>
-                <button type="button" class="btn-close modalClose" data-close></button>
-            </div>
+                <div class="modal-header w-100 d-flex justify-content-between bg-secondary-subtle">
+                    <h1 class="fs-5 m-0 fw-bold">Keyboard shortcuts</h1>
+                    <button type="button" class="btn-close modalClose" data-close></button>
+                </div>
                 <div class="modal-body d-flex flex-column flex-md-row justify-content-between m-0 gap-4">
                     <div class="m-0 w-100">
                         <ul class="list-group">
@@ -339,4 +364,5 @@
         </div>
     </div>
 </body>
+
 </html>

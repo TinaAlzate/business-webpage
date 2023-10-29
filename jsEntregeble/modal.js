@@ -50,11 +50,11 @@ function createModal(objectInfo){
 
 }
 
-function element(tag, options, children) {
+export function element(tag, options, children) {
   options ||= {}
-  let { className, textCont } = options
+  let { className, textCont, ...argument } = options
 
-  const el = document.createElement(tag)
+  const el = document.createElement(tag);
   for (const child of children) {
     el.append(child)
   }
@@ -63,6 +63,13 @@ function element(tag, options, children) {
   }
   if(textCont){
     el.innerText = textCont
+  }
+
+  if(argument){
+    for (let attribute in argument){
+      console.log(attribute, argument[attribute] )
+      el.setAttribute(attribute, argument[attribute]);
+    }
   }
   return el;
 }

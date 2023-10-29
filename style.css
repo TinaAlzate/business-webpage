@@ -202,6 +202,39 @@ footer{
 }
 
 
+.imgTemperature {
+    width: 2rem;
+    height: auto;
+}
+
+.thermometer{
+    width: 2rem;
+}
+
+.calendar{
+    font-size: 0.8rem;
+}
+
+.div-header{
+    height: 20px;
+}
+
+/* Card */
+.card {
+    backdrop-filter: blur(16px) saturate(165%);
+    -webkit-backdrop-filter: blur(16px) saturate(165%);
+    background-color: rgba(17, 25, 40, 0.50);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    width: 10rem;
+}
+
+
+.text-climate {
+    font-size: 0.6rem;
+    color: white;
+    text-align: center;
+}
 
 
 
