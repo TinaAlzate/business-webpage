@@ -137,6 +137,18 @@ header{
         background-color: var(--color-radius-icon);
     }
 }
+
+/* Section rick and morty */
+#rickandmorty{
+    background-color: var(--color-section);
+}
+
+/* Div of intersection observer  */
+.nextRequest {
+    height: 10rem;
+    background: var(--color-section);
+}
+
 footer{
     background-color: var(--color-violet);
     & p{
@@ -145,6 +157,18 @@ footer{
             color:white;
         }
     }
+}
+
+/* Modal help */
+
+.modalShow {
+    display: block !important;
+    left: auto !important;
+}
+
+.modal-dialog {
+    --bs-modal-width: none;
+    max-width: 700px;
 }
 
 /* Media queries */
@@ -177,21 +201,9 @@ footer{
     }
 }
 
-.liHoverSection {
-    border-bottom: 5px solid white;
-    font-size: 1.1rem;
-}
 
-/* Heigth for sections */
-section {
-    min-height: 50rem;
-}
-.modalShow{
-    display:block !important; 
-}
 
-.nextRequest {
-    height: 10rem;
-    background: #212529;
-}
+
+
+
 

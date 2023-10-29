@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/78bfaed56a.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="index.js" async></script>
     <script type="module" src="./jsEntregeble/keyboardEvents.js"></script>
+    <link rel="icon" type="image/png" href="./media/img/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Bussines Webpage</title>
 </head>
 
@@ -29,7 +31,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <hr class="w-100 d-block d-sm-none">
-                    <ul class="navbar-nav p-2 ps-lg-5">
+                    <ul class="navbar-nav p-2 ps-lg-5 m-0">
                         <li class="p-2">
                             <a class="text-decoration-none p-2 rounded" href="#who_we_are">Who we are?</a>
                         </li>
@@ -182,7 +184,7 @@
 
                 <img class="col-10 col-sm-4 col-lg-3 offset-lg-1" src="./media/img/4.jpg" alt="Portfolio 4">
 
-                <img class="col-10 offset-sm-2 col-sm-4 col-lg-3 offset-lg-0" src="./media/img/5.jpg" alt="Portfolio 5">
+                <img class="col-10 offset-sm-2 col-sm-4 col-lg-3 offset-lg-0 mx-lg-auto" src="./media/img/5.jpg" alt="Portfolio 5">
 
                 <img class="col-10 col-sm-4 col-lg-3 offset-lg-1" src="./media/img/6.jpg" alt="Portfolio 6">
 
@@ -264,30 +266,30 @@
                 <button class="btn offset-5 offset-sm-6 col-auto" type="submit">Send</button>
             </form>
         </section>
-        <!-- Añadimos las cards -->
-        <section class="" data-key="6">
+        <!-- Section rick and morty -->
+        <section id="rickandmorty" class="p-3 p-md-5" data-key="6">
             <h2 class="text-center pb-2 pb-md-5">Rick and Morty</h2>
-            <div class="rickMortyApi d-flex gap-4 bg-dark bg-opacity-25 align-content-center pt-5">
+            <div class="rickMortyApi d-flex gap-4 align-content-center pt-5">
 
             </div>
         </section>
+        <!-- Div of intersection observer -->
         <div id="nextRequest" class="nextRequest"></div>
     </main>
     <footer class="p-2">
         <p class="text-end align-middle m-0">© 2016 - <a href="https://www.salleurl.edu/es">La salle</a>. All Rights
             Reserved.</p>
     </footer>
-
-    <!-- Modal -->
-    <div class="modal" data-modal="modal">
-        <div class="modal-dialog">
+    <!-- Modal help -->
+    <div class="modal bg-dark bg-opacity-25 overflow-y-hidden" data-modal="modal">
+        <div class="modal-dialog h-100 d-flex align-items-center justify-content-center">
             <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="fs-5 m-0 fw-bold p-3">Keyboard shortcuts</h1>
+            <div class="modal-header w-100 d-flex justify-content-between bg-secondary-subtle">
+                <h1 class="fs-5 m-0 fw-bold">Keyboard shortcuts</h1>
                 <button type="button" class="btn-close modalClose" data-close></button>
             </div>
-                <div class="modal-body d-flex justify-content-between m-0">
-                    <div class="m-0 w-50">
+                <div class="modal-body d-flex flex-column flex-md-row justify-content-between m-0 gap-4">
+                    <div class="m-0 w-100">
                         <ul class="list-group">
                             <li
                                 class="list-group-item d-flex justify-content-between align-items-center m-0 bg-secondary-subtle">
@@ -317,9 +319,17 @@
                                     </kbd>
                                 </div>
                             </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center m-0">
+                                <div class="m-0">Escape</div>
+                                <div class="m-0">
+                                    <kbd class="bg-secondary-subtle text-black border border-secondary mx-1">
+                                        <span> Esc </span>
+                                    </kbd>
+                                </div>
+                            </li>
                         </ul>
                     </div>
-                    <div class="m-0 w-50">
+                    <div class="m-0 w-100">
                         <ul class="list-group" data-list="list">
 
                         </ul>
@@ -328,7 +338,5 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

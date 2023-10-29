@@ -25,7 +25,7 @@ function createModal(objectInfo){
     return;
   }
 
-  const firstElementList = element('li', { className: ['list-group-item', 'd-flex', 'justify-content-between', 'align-items-center', 'm-0']},[
+  const firstElementList = element('li', { className: ['list-group-item', 'd-flex', 'justify-content-between', 'align-items-center', 'm-0', 'bg-secondary-subtle']},[
     element('div', { className: ['m-0', 'fw-semibold'], textCont: 'Navigate sections' }, [])
   ]);
 
@@ -36,7 +36,7 @@ function createModal(objectInfo){
       [
         element('div', { className: ['m-0'], textCont: info.textTitle }, [] ),
         element('div', { className: ['m-0'] }, [
-          element('kbd', { className: ['bg-secondary-subtle', 'text-black', 'border', 'border-secondary', 'mx-1']}, [
+          element('kbd', { className: ['bg-secondary-subtle', 'text-black', 'border', 'border-secondary', 'px-2']}, [
             element('span', { className: ['text-black'], textCont: info.numberSerction } ,[])
           ])
         ])
@@ -73,5 +73,4 @@ buttonClose.addEventListener('click', removeModal)
 export function removeModal(){
   modal.classList.remove('modalShow');
 }
-
 
