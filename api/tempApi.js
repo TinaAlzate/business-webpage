@@ -1,9 +1,9 @@
 import { jsonConstantes, mockApi } from '../constantes/constantes.js';
 import { element } from '../jsEntregeble/modal.js';
 
+
+// Empezar a comentar hasta aca ⬇️. 
 const localSession = window.localStorage.getItem('locationKey');
-
-
 if (localSession === null) {
   const response = await Swal.fire({
     text: 'Do you agree to use your geolocation?',
@@ -64,6 +64,7 @@ function createTemperatureHTML({ daily, hourly, minutely }){
   }
 }
 
+// Comentar hasta aca ⬆️. 
 
 document.querySelector(`[data-btn="close-temp"]`).addEventListener('click', closeTemp);
 const containerTemp = document.querySelector(`[data-temperature="temp"]`);
@@ -73,6 +74,19 @@ function closeTemp(event){
 }
 
 
+
+// ?? Mock de la api de temperatura
+// function createTemperatureTest(){
+//   let { time, values } = mockApi
+//   let dateApi = new Date(time);
+//   // De esta forma comprobamos el dia y su temperatura.
+//   let day = new Date();
+//   if (day.getDate() === dateApi.getDate()){
+//     addTimeTagDocument();
+//     addTagDocumentTemp(values);
+//   }
+// }
+// Interval para el cambio de minuto
 setInterval(
   addTimeTagDocument
 ,jsonConstantes.MINUTES);
@@ -90,6 +104,7 @@ export function addTimeTagDocument(){
   }
 }
 
+// createTemperatureTest();
 
 
 function addTagDocumentTemp({ temperatureAvg, temperatureMax, temperatureMin, rainIntensityAvg, rainIntensityMax, rainIntensityMin, cloudCoverAvg, cloudCoverMax, cloudCoverMin }){
