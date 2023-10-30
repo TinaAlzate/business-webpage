@@ -1,5 +1,6 @@
 
 export const jsonConstantes = {
+      API_FORM: 'https://server-salle-form.cleverapps.io/',
       API_RICK_MORTY: 'https://rickandmortyapi.com/api/character',
       API_SERVIDOR: "https://servidorsalleform-production.up.railway.app/form",
       ALIVE: 'Alive',
@@ -8,13 +9,13 @@ export const jsonConstantes = {
       API_TEMPERATURE: 'https://api.tomorrow.io/v4/weather/forecast',
       CLASS_HIDE: 'visually-hidden',
       PATH_IMG_CLIMATE: './media/img-apiTemp',
-      CLOUDY: 55,
+      CLOUDY: 30,
       BASE_CLOUDY: 0.4,
       RAIN_ACCUMULATIO_AVG: 6,
       PRECIPITATION_PROBALITY_AVG: 10,
       WEEK_DAYS: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       MINUTES: 1000,
-      IT_RAIN: 85,
+      IT_RAIN: 250,
       RAIN_SCR_IMG: 'rain.png',
       SUN: 'sun.png',
       SUN_CLOUD: 'sun-cloud.png',
@@ -23,6 +24,7 @@ export const jsonConstantes = {
       MOON: 'moon.png',
       TIME_LIMIT: 19,
       NIGHT_CLOUD: 'night-cloud.png',
+      API_TEST: 'http://localhost:3003'
 };
 // No se puede cambiar el objeto desde fuera.
 Object.freeze(jsonConstantes);

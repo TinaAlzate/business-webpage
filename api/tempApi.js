@@ -53,7 +53,6 @@ function errorGeolocation(error){
 }
 
 function createTemperatureHTML({ daily, hourly, minutely }){
-  console.log(daily)
   let day = new Date();
   for(let { time, values } of daily){
     let dateApi = new Date(time);
@@ -138,8 +137,9 @@ function addTagDocumentTemp({ temperatureAvg, temperatureMax, temperatureMin, ra
 function predictTemperature(cloudCoverAvg, rainIntensityAvg, cloudBaseAvg){
   // Comprueba si esta lloviendo 
   const img = containerTemp.querySelector(`[data-imgClimate="climate"]`);
-  if (itRain(rainIntensityAvg) > jsonConstantes.IT_RAIN) {
+  if (rainIntensityAvg > jsonConstantes.IT_RAIN) {
     addPathTemperature(img, jsonConstantes.RAIN_SCR_IMG);
+    return;
   }
   const timeDay = new Date();
   if(timeDay.getHours() > jsonConstantes.TIME_LIMIT){

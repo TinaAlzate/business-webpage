@@ -4,7 +4,6 @@ import { startIntersectionApi } from './api/nextRequest.js';
 
 const formUser = document.getElementById('formUser');
 
-const END_POIN_API_FORMUSER = 'https://servidorsalleform-production.up.railway.app/form';
 
 formUser.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -31,7 +30,7 @@ formUser.addEventListener('submit', (event) => {
 
 const serviceApiUserForm = async (userJson) => {
   try {
-    await fetch(END_POIN_API_FORMUSER, {
+    await fetch(`${jsonConstantes.API_FORM}form`, {
       method: 'POST',
       body: JSON.stringify(userJson),
       headers: {
