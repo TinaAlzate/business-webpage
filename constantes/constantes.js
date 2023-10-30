@@ -15,7 +15,7 @@ export const jsonConstantes = {
       PRECIPITATION_PROBALITY_AVG: 10,
       WEEK_DAYS: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       MINUTES: 1000,
-      IT_RAIN: 250,
+      IT_RAIN: 400,
       RAIN_SCR_IMG: 'rain.png',
       SUN: 'sun.png',
       SUN_CLOUD: 'sun-cloud.png',
