@@ -67,7 +67,6 @@ export function element(tag, options, children) {
 
   if(argument){
     for (let attribute in argument){
-      console.log(attribute, argument[attribute] )
       el.setAttribute(attribute, argument[attribute]);
     }
   }

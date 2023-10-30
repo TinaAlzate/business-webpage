@@ -1,8 +1,8 @@
 import { jsonConstantes, mockApi } from '../constantes/constantes.js';
-import { element } from '../jsEntregeble/modal.js';
+import { element } from '../events/modal.js';
 
 
-// Empezar a comentar hasta aca ⬇️. 
+// Empezar a comentar desde aca ⬇️. 
 const localSession = window.localStorage.getItem('locationKey');
 if (localSession === null) {
   const response = await Swal.fire({
@@ -73,9 +73,8 @@ function closeTemp(event){
   containerTemp.classList.add(`${jsonConstantes.CLASS_HIDE}`);
 }
 
+// ?? Mock de la api de temperatura - para cuando la petición este comentada
 
-
-// ?? Mock de la api de temperatura
 // function createTemperatureTest(){
 //   let { time, values } = mockApi
 //   let dateApi = new Date(time);
@@ -104,7 +103,7 @@ export function addTimeTagDocument(){
   }
 }
 
-// createTemperatureTest();
+// createTemperatureTest(); // descomentar si la petición esta comentada 
 
 
 function addTagDocumentTemp({ temperatureAvg, temperatureMax, temperatureMin, rainIntensityAvg, cloudCoverAvg, rainAccumulationSum, cloudBaseAvg }){
@@ -132,7 +131,7 @@ function addTagDocumentTemp({ temperatureAvg, temperatureMax, temperatureMin, ra
     ? `${jsonConstantes.PATH_IMG_CLIMATE}/${jsonConstantes.HOT}`
     : `${jsonConstantes.PATH_IMG_CLIMATE}/${jsonConstantes.COLD}`;
   const rainNow = itRain(rainAccumulationSum + rainIntensityAvg);
-  predictTemperature(cloudCoverAvg, rainNow, cloudBaseAvg)
+  predictTemperature(cloudCoverAvg, rainNow, cloudBaseAvg);
   document.querySelector(`[data-climate="climate"]`).classList.remove('d-none');
 }
 
