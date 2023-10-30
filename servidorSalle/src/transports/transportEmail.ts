@@ -18,7 +18,7 @@ export const  transporEmailFunction = (req: Request)=>{
     }).then(() => {
         console.log('send emails');
     }).catch(err => {
-        console.log('Error in send emails');
+        console.log('Error in send emails', err);
         throw new Error('Error form, data incomplete');
     });
     // Admin email
