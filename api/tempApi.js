@@ -107,7 +107,7 @@ export function addTimeTagDocument(){
 // createTemperatureTest();
 
 
-function addTagDocumentTemp({ temperatureAvg, temperatureMax, temperatureMin, rainIntensityAvg, rainIntensityMax, rainIntensityMin, cloudCoverAvg, cloudCoverMax, cloudCoverMin }){
+function addTagDocumentTemp({ temperatureAvg, temperatureMax, temperatureMin, rainIntensityAvg, cloudCoverAvg, rainAccumulationSum, cloudBaseAvg }){
   // Create elements
   const tagElement = 
   element('div', { className: ['d-flex', 'gap-4', 'justify-content-center', 'align-items-center', 'pb-2'] }, 
@@ -131,11 +131,12 @@ function addTagDocumentTemp({ temperatureAvg, temperatureMax, temperatureMin, ra
   document.getElementById('data-ther').src = temperatureAvg > 20
     ? `${jsonConstantes.PATH_IMG_CLIMATE}/${jsonConstantes.HOT}`
     : `${jsonConstantes.PATH_IMG_CLIMATE}/${jsonConstantes.COLD}`;
-  predictTemperature(cloudCoverAvg, rainIntensityAvg )
+  const rainNow = itRain(rainAccumulationSum + rainIntensityAvg);
+  predictTemperature(cloudCoverAvg, rainNow, cloudBaseAvg)
   document.querySelector(`[data-climate="climate"]`).classList.remove('d-none');
 }
 
-function predictTemperature(cloudCoverAvg, rainIntensityAvg){
+function predictTemperature(cloudCoverAvg, rainIntensityAvg, cloudBaseAvg){
   // Comprueba si esta lloviendo 
   const img = containerTemp.querySelector(`[data-imgClimate="climate"]`);
   if (itRain(rainIntensityAvg) > jsonConstantes.IT_RAIN) {
@@ -143,13 +144,13 @@ function predictTemperature(cloudCoverAvg, rainIntensityAvg){
   }
   const timeDay = new Date();
   if(timeDay.getHours() > jsonConstantes.TIME_LIMIT){
-    if (cloudCoverAvg > jsonConstantes.CLOUDY){
+    if (cloudCoverAvg > jsonConstantes.CLOUDY || cloudBaseAvg >= jsonConstantes.BASE_CLOUDY){
       addPathTemperature(img, jsonConstantes.NIGHT_CLOUD);
       return;
     }
     addPathTemperature(img, jsonConstantes.MOON );
   }else{
-    if (cloudCoverAvg > jsonConstantes.CLOUDY){
+    if (cloudCoverAvg > jsonConstantes.CLOUDY || cloudBaseAvg >= jsonConstantes.BASE_CLOUDY){
       addPathTemperature(img, jsonConstantes.SUN_CLOUD)
       return;
     }
