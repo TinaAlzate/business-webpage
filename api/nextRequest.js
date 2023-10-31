@@ -1,3 +1,4 @@
+import { jsonConstantes } from "../constantes/constantes.js";
 import { fetchApi, addCardCharacter } from "./apiRick.js";
 
 let observer;
@@ -19,7 +20,8 @@ export function startIntersectionApi({ options, element, urlApi }) {
 
 const callbackIntersector = async (entries) => {
   for (let { isIntersecting } of entries){
-    if (isIntersecting && urlApiNext !== null){
+    if (isIntersecting){
+      urlApiNext === null ? urlApiNext = jsonConstantes.API_RICK_MORTY : urlApiNext
       const { results, info } = await fetchApi(urlApiNext);
       addCardCharacter(results, info);
         urlApiNext = info.next

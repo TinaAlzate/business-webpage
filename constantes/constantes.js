@@ -24,7 +24,8 @@ export const jsonConstantes = {
       MOON: 'moon.png',
       TIME_LIMIT: 19,
       NIGHT_CLOUD: 'night-cloud.png',
-      API_TEST: 'http://localhost:3003'
+      API_TEST: 'http://localhost:3003',
+      TEST_API_LAST_PAGE: 'https://rickandmortyapi.com/api/character/?page=42'
 };
 // No se puede cambiar el objeto desde fuera.
 Object.freeze(jsonConstantes);
