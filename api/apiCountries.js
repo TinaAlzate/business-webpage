@@ -6,7 +6,7 @@ const getRandomNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min;
 };
 
-let { results, correctAnswer, currentRandomAnswerNumber, currentQuestion, currentBadAnswers, answerStreak, questions, answerLetters, maxLength  } = {
+let { results, correctAnswerIndex,correctAnswer, currentRandomAnswerNumber, currentQuestion, currentBadAnswers, answerStreak, questions, answerLetters, maxLength  } = {
   results: [],
   correctAnswer: "",
   currentRandomAnswerNumber: 0,
@@ -15,7 +15,8 @@ let { results, correctAnswer, currentRandomAnswerNumber, currentQuestion, curren
   answerStreak: 0,
   questions: ["is the capital of...", "What country does it belong to"],
   answerLetters: ["a.", "b.", "c.", "d."],
-  maxLength: ''
+  maxLength: '',
+  correctAnswerIndex: 0
 };
 
 const appEl = document.querySelector(".app-container");
@@ -111,8 +112,9 @@ const createQuestion = () => {
  */
 const createAnswers = () => {
   const arrAnswers = currentBadAnswers.map((value) => {
-    if(results[value].continent.name !== correctAnswer.continent.name)
-    return results[value].name;
+    if (results[value].continent.name !== results[correctAnswerIndex].continent.name){
+      return results[value].name;
+    }
   });
 
   arrAnswers.push(results[currentRandomAnswerNumber].name);
@@ -140,25 +142,29 @@ const getRandomQuestion = () => {
 const getRandomAnswer = () => {
   const ranNum = getRandomNumber(0, maxLength);
   currentRandomAnswerNumber = ranNum;
-  correctAnswer = results[ranNum];
+  correctAnswerIndex = ranNum;
+  correctAnswer = results[ranNum].name;
 };
 
 /**
  * Generate incorrect answers
  */
-
 const getRandomBadAnswers = () => {
   currentBadAnswers.forEach((_, index) => {
     currentBadAnswers[index] = getRandomNumber(0, maxLength);
     if (currentBadAnswers[index] === currentRandomAnswerNumber)
       getRandomBadAnswers();
   });
-  if (
-    currentBadAnswers.some(
-      (val, i) => currentBadAnswers.indexOf(val) !== i
-    )
-  )
+
+  let getFunctionRandomAgain = true;
+  currentBadAnswers.map((value, i )=> {
+    if (results[value].continent.name === results[correctAnswerIndex].continent.name || currentBadAnswers.indexOf(value) !== i){
+       getFunctionRandomAgain =  false
+    }
+  });
+  if (!getFunctionRandomAgain){
     getRandomBadAnswers();
+  }
 };
 
 /**
@@ -235,6 +241,9 @@ const createRandomData = () => {
 
 init();
 
+/**
+ * Increase the counter with good answers
+ */
 function pointsCorrect(){
   const points =  element('div', { className: ['text-secondary', 'w-100', 'm-2'] }, [
     element('p', { className: ['m-0', 'text-start'], textCont: `Score:${answerStreak}/${maxLength}` }, [])
