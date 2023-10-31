@@ -10,9 +10,9 @@
 
 **Paquetes externos**
 
-- [Bootstrap](https://getbootstrap.com/) (sólo cdn)
-- [Sweetalert](https://sweetalert2.github.io/) (creación de modales)
-- [Graphql](https://graphql.org/) (consumo de API quiz)
+- [Bootstrap](https://getbootstrap.com/) (Sólo cdn)
+- [Sweetalert](https://sweetalert2.github.io/) (Creación de modales)
+- [Graphql](https://graphql.org/) (Consumo de API quiz)
 
 
 

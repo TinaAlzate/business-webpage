@@ -5,6 +5,11 @@ const listenerNumSections = ({key}) => {
   if(key === 'Escape'){
     removeModal()
   }
+
+  if(key.toLowerCase() === 'c') {
+    showCardTemperature();
+  }
+
   if (key.toLowerCase() === 'h') {
     helpModal(key);
   }
@@ -19,7 +24,9 @@ const listenerNumSections = ({key}) => {
     section.scrollIntoView();
   }
 }
-
+function showCardTemperature(){
+  document.querySelector(`[data-temperature="temp"]`).classList.remove('visually-hidden');
+}
 document.addEventListener('keypress', listenerNumSections)
 document.addEventListener('keydown', listenerNumSections)
 
