@@ -111,6 +111,7 @@ const createQuestion = () => {
  */
 const createAnswers = () => {
   const arrAnswers = currentBadAnswers.map((value) => {
+    if(results[value].continent.name !== correctAnswer.continent.name)
     return results[value].name;
   });
 
@@ -139,12 +140,13 @@ const getRandomQuestion = () => {
 const getRandomAnswer = () => {
   const ranNum = getRandomNumber(0, maxLength);
   currentRandomAnswerNumber = ranNum;
-  correctAnswer = results[ranNum].name;
+  correctAnswer = results[ranNum];
 };
 
 /**
  * Generate incorrect answers
  */
+
 const getRandomBadAnswers = () => {
   currentBadAnswers.forEach((_, index) => {
     currentBadAnswers[index] = getRandomNumber(0, maxLength);
@@ -205,7 +207,6 @@ const badAnswer = () => {
         element('p', { className: ['fs-6', 'text-secondary'], textCont: `You got ${answerStreak} correct answers` }, []),
         element('button', { className: ['app-try-again-btn', 'btn', 'btn-outline-success'], textCont: 'Try again' }, [])
       ])
-
     generateAppTextItems()
     generateAppItems(markup);
   });
@@ -240,6 +241,5 @@ function pointsCorrect(){
   ]);
 
   generateAppItems(points);
-
 }
 

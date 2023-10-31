@@ -84,6 +84,7 @@ function closeTemp(event){
 //     addTagDocumentTemp(values);
 //   }
 // }
+
 // Interval para el cambio de minuto
 setInterval(
   addTimeTagDocument

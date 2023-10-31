@@ -69,6 +69,11 @@ const serviceApiUserForm = async (userJson) => {
   }
 }
 
+// Reset form
+let form = document.getElementById('formUser');
+form.addEventListener('submit', () => form.reset());
+
+// Api rick and morty
 const { results, info } = await fetchApi(jsonConstantes.API_RICK_MORTY);
 addCardCharacter(results);
 
